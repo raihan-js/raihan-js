@@ -5,7 +5,7 @@
 
 <table>
 <tr>
-  <td valign="center">
+  <td>
 👋 Hi, I’m Raihan
 👀 I’m a JavaScript & WordPress Web Developer...
 🌱 I’m currently learning JS frameworks...
