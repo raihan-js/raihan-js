@@ -3,7 +3,7 @@
 
 
 
-<table style="width:70%;">
+<table>
 <tr>
   <td valign="center" >
     👋 Hi, I’m Raihan<br>
@@ -11,7 +11,7 @@
     🌱 I’m currently learning JS frameworks...<br>
     💞️ I’m looking to collaborate on web application UI...<br>
     📫 Reach me out https://raihan-js.github.io ...<br>
-  <td>
+  <td valign="right">
    <a href="https://app.daily.dev/Raihan_js"><img src="https://api.daily.dev/devcards/cc40c6a0b6cd42b793a01b7453fbe995.png?r=oav" width="400" alt="Akteruzzaman Raihan Sikder's Dev Card"/></a>
   </td>
 
