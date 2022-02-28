@@ -3,9 +3,9 @@
 
 
 
-<table>
+<table style="width:70%;">
 <tr>
-  <td valign="center" style="width:70%;">
+  <td valign="center" >
     👋 Hi, I’m Raihan<br>
     👀 I’m a JavaScript & WordPress Web Developer...<br>
     🌱 I’m currently learning JS frameworks...<br>
