@@ -1,3 +1,6 @@
+# Hi, I'm Raihan <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="29px">
+
+
 - 👋 Hi, I’m Raihan
 - 👀 I’m a JavaScript & WordPress Web Developer...
 - 🌱 I’m currently learning JS frameworks...
