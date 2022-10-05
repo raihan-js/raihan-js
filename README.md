@@ -13,7 +13,7 @@
 
 - 📫 How to reach me **araihansikder@gmail.com**
 
-- 📄 Know about my experiences [Resume]([https://drive.google.com/file/d/1zLyN5peExDRSbV7wpDvfsJWera4-cN1k/view?usp=sharing](https://drive.google.com/file/d/1_a76Aou-ykUlR6QoOmfvcbPkk700HiMF/view?usp=sharing))
+- 📄 Know about my experiences [https://drive.google.com/file/d/1_a76Aou-ykUlR6QoOmfvcbPkk700HiMF/view?usp=sharing]([https://drive.google.com/file/d/1zLyN5peExDRSbV7wpDvfsJWera4-cN1k/view?usp=sharing](https://drive.google.com/file/d/1_a76Aou-ykUlR6QoOmfvcbPkk700HiMF/view?usp=sharing))
 
 - ⚡ Fun fact **coffee is my fuel**
 
