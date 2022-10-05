@@ -3,7 +3,7 @@
 
 - 🌱 I’m currently learning **JavaScript and PHP frameworks**
 
-- 🤝 I’m looking for help with **building Web and Mobile Apps**
+- 🤝 I’m looking for help with **building robust Website and Web Apps**
 
 - 👨‍💻 All of my projects are available at [raihan-js.github.io](raihan-js.github.io)
 
