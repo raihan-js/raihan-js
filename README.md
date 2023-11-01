@@ -11,7 +11,7 @@
 
 - 💬 Ask me about **React, Laravel, JavaScript, PHP**
 
-- 📫 How to reach me **araihansikder@gmail.com**
+- 📫 How to reach me **ceo@bracketi.com**
 
 - 📄 Know about my experiences [Check Resume](https://drive.google.com/file/d/1RVjVjXq3EQm-067W9F4_wizV3o_3zbMp/view?usp=share_link)
 
