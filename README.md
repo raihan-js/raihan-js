@@ -77,6 +77,21 @@
 <img src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack" />
 <!-- Vite -->
 <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <!-- Livewire -->
+<img src="https://img.shields.io/badge/Livewire-20B2AA?style=for-the-badge&logo=laravel-livewire&logoColor=white" alt="Livewire" />
+<!-- DigitalOcean -->
+<img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white" alt="DigitalOcean" />
+<!-- OpenAI -->
+<img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+<!-- Llama -->
+<img src="https://img.shields.io/badge/Llama-FFA500?style=for-the-badge&logo=llama&logoColor=white" alt="Llama" />
+<!-- TensorFlow -->
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+<!-- PyTorch -->
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+<!-- Machine Learning -->
+<img src="https://img.shields.io/badge/Machine_Learning-0769AD?style=for-the-badge&logo=MachineLearning&logoColor=white" alt="Machine Learning" />
+
 </p>
 
 
