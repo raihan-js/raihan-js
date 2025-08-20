@@ -1,97 +1,106 @@
-<h1 align="center">Hi 👋, I'm Raihan</h1>
-<h3 align="center">An aspiring Full-Stack developer from Bangladesh</h3>
+# 👋 Hey there, I'm Raihan
 
-- 🌱 I’m currently learning **JavaScript and PHP frameworks**
+<div align="center">
+  
+**🚀 Full-Stack Developer | 🤖 AI Engineer | 🇧🇩 From Bangladesh**
 
-- 🤝 I’m looking for help with **building robust Website and Web Apps**
+*Building intelligent web applications and training custom AI models*
 
-- 👨‍💻 All of my projects are available at [raihan-js.github.io](https://raihan-js.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://raihan-js.github.io)
+[![Blog](https://img.shields.io/badge/Blog-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ryandevv)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raihan@clarioscope.ai)
 
-- 📝 I regularly write articles on [https://dev.to/ryandevv](https://dev.to/ryandevv)
+</div>
 
-- 💬 Ask me about **React, Laravel, JavaScript, PHP**
+---
 
-- 📫 How to reach me **ceo@bracketi.com**
+## 🎯 What I'm Working On
 
-- 📄 Know about my experiences [Check Resume](https://drive.google.com/file/d/1RVjVjXq3EQm-067W9F4_wizV3o_3zbMp/view?usp=share_link)
+- 🧠 **Training custom AI models** for healthcare and specialized domains
+- 🔬 **Building AI-powered web applications** with React and Laravel
+- 📚 **Mastering modern JavaScript frameworks** and PHP ecosystems
+- 🤝 **Collaborating on innovative AI projects** and robust web solutions
 
-- ⚡ Fun fact **coffee is my fuel**
+## 🤖 AI & Machine Learning
 
+- 🏥 **[MedLLM-10M](https://huggingface.co/raihan-js/medllm-10m)** - Custom medical language model trained for healthcare applications
+- 🔬 Experimenting with **LLaMA, OpenAI APIs, and custom model fine-tuning**
+- 🧪 Building **AI-driven features** into web applications
+- 📊 Working with **TensorFlow** and **PyTorch** for deep learning projects
 
-<a align="right" href="https://app.daily.dev/Raihan_js"><img src="https://api.daily.dev/devcards/cc40c6a0b6cd42b793a01b7453fbe995.png?r=q7q" width="400" alt="Akteruzzaman Raihan Sikder's Dev Card"/></a>
+## 💻 Tech Arsenal
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://dev.to/ryandevv" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="ryandevv" height="30" width="40" /></a>
-<a href="https://twitter.com/ryandevv_" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="ryandevv_" height="30" width="40" /></a>
-<a href="https://fb.com/raihanl2" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="raihanl2" height="30" width="40" /></a>
-</p>
+### **Frontend & UI**
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=flat-square&logo=redux&logoColor=white)
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
-<!-- Laravel -->
-<img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
-<!-- React -->
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-<!-- Node.js -->
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-<!-- MySQL -->
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-<!-- JavaScript -->
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-<!-- Expo -->
-<img src="https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white" alt="Expo" />
-<!-- Express -->
-<img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-<!-- Firebase -->
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
-<!-- Git -->
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-<!-- Gulp -->
-<img src="https://img.shields.io/badge/Gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white" alt="Gulp" />
-<!-- Heroku -->
-<img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku" />
-<!-- MongoDB -->
-<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-<!-- NestJS -->
-<img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS" />
-<!-- Next.js -->
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-<!-- PHP -->
-<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-<!-- PostgreSQL -->
-<img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-<!-- Pug -->
-<img src="https://img.shields.io/badge/Pug-A86454?style=for-the-badge&logo=pug&logoColor=white" alt="Pug" />
-<!-- Redis -->
-<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
-<!-- Redux -->
-<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
-<!-- Sass -->
-<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
-<!-- SQLite -->
-<img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-<!-- Tailwind CSS -->
-<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-<!-- Webpack -->
-<img src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack" />
-<!-- Vite -->
-<img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
-  <!-- Livewire -->
-<img src="https://img.shields.io/badge/Livewire-20B2AA?style=for-the-badge&logo=laravel-livewire&logoColor=white" alt="Livewire" />
-<!-- DigitalOcean -->
-<img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white" alt="DigitalOcean" />
-<!-- OpenAI -->
-<img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
-<!-- Llama -->
-<img src="https://img.shields.io/badge/Llama-FFA500?style=for-the-badge&logo=llama&logoColor=white" alt="Llama" />
-<!-- TensorFlow -->
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-<!-- PyTorch -->
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-<!-- Machine Learning -->
-<img src="https://img.shields.io/badge/Machine_Learning-0769AD?style=for-the-badge&logo=MachineLearning&logoColor=white" alt="Machine Learning" />
+### **Backend & APIs**
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat-square&logo=express&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
 
-</p>
+### **AI & Machine Learning**
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square&logoColor=black)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![LLaMA](https://img.shields.io/badge/LLaMA-8A2BE2?style=flat-square&logoColor=white)
 
+### **Databases & Cloud**
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=flat-square&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean-0080FF?style=flat-square&logo=digitalocean&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 
+### **Tools & Workflow**
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=flat-square&logo=webpack&logoColor=black)
+
+## 🌟 Featured Projects
+
+### 🏥 MedLLM-10M
+A specialized language model trained for medical applications, capable of understanding healthcare terminology and providing relevant insights.
+
+**Tech Stack:** Python, Transformers, PyTorch, Hugging Face
+**[View on Hugging Face →](https://huggingface.co/raihan-js/medllm-10m)**
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117)
+
+</div>
+
+## 🤝 Let's Connect
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/raihan-js)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/ryandevv_)
+[![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ryandevv)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://fb.com/raihanl2)
+
+</div>
+
+---
+
+<div align="center">
+
+**💡 "Bridging the gap between intelligent AI and intuitive user experiences"**
+
+*⚡ Powered by coffee and curiosity*
+
+[![Resume](https://img.shields.io/badge/📄_Resume-4285F4?style=for-the-badge&logoColor=white)](https://drive.google.com/file/d/1RVjVjXq3EQm-067W9F4_wizV3o_3zbMp/view?usp=share_link)
+
+</div>
