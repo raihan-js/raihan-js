@@ -76,9 +76,22 @@ A specialized language model trained for medical applications, capable of unders
 
 <div align="center">
 
+<!-- Main Stats -->
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117)
 
+<!-- Languages -->
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117)
+
+<!-- Profile Summary Cards -->
+### 🔥 Contribution Trends & Activity
+
+![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=raihan-js&theme=tokyonight)
+
+![Productive Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=raihan-js&theme=tokyonight)
+
+![Commits per Language](https://github-profile-summary-cards.vercel.app/api/cards/commit-per-language?username=raihan-js&theme=tokyonight)
+
+![Repos per Language](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=raihan-js&theme=tokyonight)
 
 </div>
 
