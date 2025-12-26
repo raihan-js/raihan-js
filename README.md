@@ -111,29 +111,17 @@ A specialized **10 million parameter** language model trained for medical applic
 
 ## GitHub Activity
 
-<div align="center">
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=default&hide_border=true&include_all_commits=true&count_private=true">
-  <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" height="180">
-</picture>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages" />
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=radical&hide_border=true&langs_count=8">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=default&hide_border=true&langs_count=8">
-  <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=radical&hide_border=true&langs_count=8" height="180">
-</picture>
-
-<br><br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=raihan-js&theme=radical&hide_border=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=raihan-js&theme=default&hide_border=true">
-  <img alt="GitHub Streak" src="https://streak-stats.demolab.com?user=raihan-js&theme=radical&hide_border=true">
-</picture>
-
-</div>
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=raihan-js&theme=radical&hide_border=true" alt="GitHub Streak" />
+</p>
 
 ---
 
