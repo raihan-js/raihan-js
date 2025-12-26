@@ -23,8 +23,12 @@
 
 ## 🤖 AI & Machine Learning
 
-- 🏥 **[MedLLM-10M](https://huggingface.co/raihan-js/medllm-10m)** - Custom medical language model trained for healthcare applications
-- 🔬 Experimenting with **LLaMA, OpenAI APIs, and custom model fine-tuning**
+### Trained Models
+- 🚀 **[ORCH-Fusion 150M](https://huggingface.co/raihan-js/orch-150m-fullstack)** - 102M parameter code generation model for full-stack development
+- 🏥 **[MedLLM-10M](https://huggingface.co/raihan-js/medllm-10m)** - Custom medical language model for healthcare applications
+
+### Research & Development
+- 🔬 Training **custom transformer models** from scratch with novel efficiency techniques
 - 🧪 Building **AI-driven features** into web applications
 - 📊 Working with **TensorFlow** and **PyTorch** for deep learning projects
 
@@ -66,11 +70,28 @@
 
 ## 🌟 Featured Projects
 
+### 🚀 ORCH-Fusion 150M
+A **102 million parameter** code generation AI trained from scratch for full-stack development. Generates React, Next.js, FastAPI, and Prisma code.
+
+| Specs | Value |
+|-------|-------|
+| Parameters | 102.4M |
+| Training Loss | 0.0157 |
+| Context Length | 4096 |
+
+**Tech Stack:** Python, PyTorch, Custom Transformer Architecture
+
+[![HuggingFace](https://img.shields.io/badge/🤗_Model-ORCH--150M-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-150m-fullstack)
+[![GitHub](https://img.shields.io/badge/GitHub-ORCH-black?style=flat-square&logo=github)](https://github.com/raihan-js/orch)
+
+---
+
 ### 🏥 MedLLM-10M
 A specialized language model trained for medical applications, capable of understanding healthcare terminology and providing relevant insights.
 
 **Tech Stack:** Python, Transformers, PyTorch, Hugging Face
-**[View on Hugging Face →](https://huggingface.co/raihan-js/medllm-10m)**
+
+[![HuggingFace](https://img.shields.io/badge/🤗_Model-MedLLM-yellow?style=flat-square)](https://huggingface.co/raihan-js/medllm-10m)
 
 ## 📊 GitHub Stats
 
