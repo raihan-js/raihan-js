@@ -111,17 +111,18 @@ A specialized **10 million parameter** language model trained for medical applic
 
 ## GitHub Activity
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
-</p>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=raihan-js&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Raihan's GitHub Stats" />
+</a>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=buefy&hide_border=true" alt="Top Languages" />
+</a>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages" />
-</p>
+<br><br>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=raihan-js&theme=radical&hide_border=true" alt="GitHub Streak" />
-</p>
+<a href="https://github.com/raihan-js/orch">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=raihan-js&repo=orch&theme=buefy" alt="ORCH Repository" />
+</a>
 
 ---
 
