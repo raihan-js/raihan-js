@@ -1,13 +1,14 @@
-# Hey there, I'm Raihan
+# Hey there, I'm Raihan 👋
 
 <div align="center">
 
-**Full-Stack Developer | AI Engineer | From Bangladesh**
+**AI/ML Engineer · CTO at [ClarioScope AI](https://clarioscope.ai/) · From Bangladesh**
 
-*Building intelligent web applications and training custom AI models*
+*Train small language models (SLMs) from scratch · Fine-tune larger ones with QLoRA · Ship production AI products*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://raihan-js.github.io)
-[![Blog](https://img.shields.io/badge/Blog-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ryandevv)
+[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)](https://huggingface.co/raihan-js)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raihan-js/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raihan@clarioscope.ai)
 
 </div>
@@ -16,72 +17,117 @@
 
 ## What I'm Working On
 
-- Training **custom AI models** for code generation and specialized domains
-- Building **AI-powered web applications** with React and Laravel
-- Developing **novel efficiency techniques** for consumer-grade GPU training
-- Creating **open-source AI tools** for the developer community
+- 🧠 **Training small language models from scratch** &mdash; the [ORCH series](https://huggingface.co/raihan-js) (350M&ndash;3B) for Next.js code generation, and [MedLLM-10M](https://huggingface.co/raihan-js/medllm-10m) for medical applications
+- 🔧 **Fine-tuning larger base models** with QLoRA &mdash; [ORCH-7B](https://huggingface.co/raihan-js/orch-7b) is a 4-bit fine-tune of DeepSeek Coder 6.7B
+- 🏥 **Leading engineering at [ClarioScope AI](https://clarioscope.ai/)** &mdash; HIPAA-compliant healthcare practice growth platform
+- 🚀 **Shipping production AI products** &mdash; [BeautyCrew AI](https://beautycrew.ai), [VETR Proposal](https://vetrproposal.com), [CommonRoom AI](https://commonroomai.com)
+- 📚 **Open-source everything** &mdash; all model weights, configs, and tokenizers are public on Hugging Face
 
 ---
 
 ## AI Models I've Trained
 
+All published openly on [🤗 Hugging Face](https://huggingface.co/raihan-js). Configs and tokenizers included.
+
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ORCH-Fusion 150M
+### 🎼 ORCH Next.js 3B
 
-<img src="https://raw.githubusercontent.com/raihan-js/orch/main/assets/logo-simple.png" alt="ORCH Logo" width="80" align="right">
+A **3 billion parameter** decoder-only transformer trained **from scratch** for full-stack Next.js code generation.
 
-A **102 million parameter** code generation AI trained from scratch for full-stack development.
+| Spec | Value |
+|------|-------|
+| Parameters | ~3.0B |
+| Architecture | Custom LLaMA-style |
+| Layers / Hidden | 32 / 2,560 |
+| Attention / KV (GQA) | 32 / 8 |
+| Vocab | 32,000 (custom) |
+| Context | 16,384 tokens |
+| Hardware | NVIDIA A40 48GB (RunPod) |
 
-| Metric | Value |
-|--------|-------|
-| Parameters | 102.4M |
-| Training Loss | 0.0157 |
-| Validation Loss | 0.0149 |
-| Context Length | 4096 |
-
-**Capabilities:**
-- React & Next.js components
-- FastAPI endpoints
-- Prisma schemas
-- TypeScript/JavaScript
-- Python code
-
-[![HuggingFace](https://img.shields.io/badge/🤗_HuggingFace-Model-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-150m-fullstack)
-[![GitHub](https://img.shields.io/badge/GitHub-Source-black?style=flat-square&logo=github)](https://github.com/raihan-js/orch)
+[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-nextjs-3b)
 
 </td>
 <td width="50%" valign="top">
 
-### MedLLM-10M
+### 🔧 ORCH-7B
 
-A specialized **10 million parameter** language model trained for medical applications.
+**QLoRA fine-tune** of DeepSeek Coder 6.7B Instruct, specialized for autonomous Next.js generation.
 
-| Metric | Value |
-|--------|-------|
-| Parameters | 10M |
-| Domain | Healthcare |
-| Architecture | Transformer |
+| Spec | Value |
+|------|-------|
+| Base model | DeepSeek Coder 6.7B Instruct |
+| Method | QLoRA (4-bit NF4 + LoRA) |
+| Training | 43h on a single A100 |
+| Steps | 5,238 |
+| Context | 16,384 (linear RoPE 4×) |
 
-**Capabilities:**
-- Medical terminology understanding
-- Healthcare text analysis
-- Clinical note processing
-- Medical Q&A assistance
+[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-7b)
+[![Studio](https://img.shields.io/badge/🎨_ORCH-Studio-D4A574?style=flat-square)](https://huggingface.co/spaces/raihan-js/orch-studio)
 
-[![HuggingFace](https://img.shields.io/badge/🤗_HuggingFace-Model-yellow?style=flat-square)](https://huggingface.co/raihan-js/medllm-10m)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🚀 ORCH Fusion (272M)
+
+Compact code-gen model trained **from scratch** on consumer hardware (RTX 3060 12GB).
+
+| Spec | Value |
+|------|-------|
+| Parameters | 272.7M |
+| Architecture | Custom LLaMA-style |
+| Layers / Hidden | 24 / 1,024 |
+| GQA | 16 heads / 4 KV |
+| Vocab | 2,103 (tiny custom) |
+
+**Benchmark (ORCH-ProjectBench):** 76.6 overall · 95.3 code parse · 93.3 format
+
+[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-fusion)
+
+</td>
+<td width="50%" valign="top">
+
+### 🩺 MedLLM-10M
+
+GPT-2 style language model trained **from scratch** on medical literature.
+
+| Spec | Value |
+|------|-------|
+| Parameters | ~27.7M (10M body) |
+| Architecture | GPT-2 |
+| Layers / Hidden | 8 / 512 |
+| Heads / FFN | 8 / 2,048 |
+| Vocab | 5,000 (custom) |
+| Context | 512 |
+| Hardware | RTX 3060 12GB |
+
+> ⚠️ Research / educational use only. Not for clinical decision-making.
+
+[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/medllm-10m)
 
 </td>
 </tr>
 </table>
+
+Also published: [ORCH Next.js 350M v2](https://huggingface.co/raihan-js/orch-nextjs-350m-v2) (287M, from scratch with 16k vocab).
 
 ---
 
 ## Tech Stack
 
 <div align="center">
+
+### AI & ML
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)
+![Transformers](https://img.shields.io/badge/Transformers-FF6F00?style=for-the-badge)
+![QLoRA](https://img.shields.io/badge/PEFT_/_QLoRA-412991?style=for-the-badge)
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge)
 
 ### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -90,51 +136,43 @@ A specialized **10 million parameter** language model trained for medical applic
 ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ### Backend
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
-### AI & ML
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/🤗_HuggingFace-FFD21E?style=for-the-badge)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-
-### Databases
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+### Cloud & DevOps
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![RunPod](https://img.shields.io/badge/RunPod-673AB7?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 </div>
 
 ---
 
-## GitHub Stats
+## Selected Live Products
 
-<div align="center">
-
-![](https://github-readme-stats.vercel.app/api?username=raihan-js&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=raihan-js&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=raihan-js&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-
-[![](https://visitcount.itsvg.in/api?id=raihan-js&icon=0&color=0)](https://visitcount.itsvg.in)
-
-</div>
+| Product | What it does |
+|---|---|
+| [ClarioScope AI](https://clarioscope.ai/) | HIPAA-compliant healthcare practice growth platform (CTO) |
+| [BeautyCrew AI](https://beautycrew.ai) | Booking management for the beauty industry — prevents missed appointments |
+| [VETR Proposal](https://vetrproposal.com) | AI-assisted federal contracting co-pilot for small business teams |
+| [CommonRoom AI](https://commonroomai.com) | Collaborative digital workspace — 15 group-coordination tools, no install |
+| [ORCH Studio](https://huggingface.co/spaces/raihan-js/orch-studio) | Generate complete Next.js apps from natural language (powered by ORCH-7B) |
 
 ---
 
-## Connect With Me
+## Open Source
 
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/raihan-js)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/ryandevv_)
-[![Dev.to](https://img.shields.io/badge/Dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ryandevv)
+- **[orch-ai](https://huggingface.co/orch-ai)** — Hugging Face org for the ORCH code-generation model family
+- **[clarioscope-ai](https://huggingface.co/clarioscope-ai)** — ClarioScope AI's Hugging Face org
+- Configs, tokenizers, and training details are public on every model card
 
 ---
 
-**"Bridging the gap between intelligent AI and intuitive user experiences"**
+<div align="center">
 
-[![Resume](https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1RVjVjXq3EQm-067W9F4_wizV3o_3zbMp/view?usp=share_link)
+📫 **Get in touch:** [raihan@clarioscope.ai](mailto:raihan@clarioscope.ai) · [Portfolio](https://raihan-js.github.io)
 
 </div>
