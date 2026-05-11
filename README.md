@@ -43,7 +43,7 @@ Within 4 percentage points of accuracy of the best frontier model, **22× faster
 
 [![Model card](https://img.shields.io/badge/🤗_Model-Card-yellow?style=for-the-badge)](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) [![dev.to writeup](https://img.shields.io/badge/dev.to-Writeup-000000?style=for-the-badge&logo=devdotto)](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2)
 
-![Accuracy vs latency](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1/resolve/main/accuracy_vs_latency.png)
+![Accuracy vs latency](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1/resolve/main/accuracy_vs_latency.png?v=2)
 
 ---
 
