@@ -19,9 +19,31 @@
 
 - 🧠 **Training small language models from scratch** &mdash; the [ORCH series](https://huggingface.co/raihan-js) (350M&ndash;3B) for Next.js code generation, and [MedLLM-10M](https://huggingface.co/raihan-js/medllm-10m) for medical applications
 - 🔧 **Fine-tuning larger base models** with QLoRA &mdash; [ORCH-7B](https://huggingface.co/raihan-js/orch-7b) is a 4-bit fine-tune of DeepSeek Coder 6.7B
+- 🎯 **Building benchmark-grade specialist SLMs** &mdash; [clarioscope-intent-deberta-v1](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) matches frontier LLMs within 4 pp of accuracy at **22× lower latency** and $0/inference ([dev.to writeup](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2))
 - 🏥 **Leading engineering at [ClarioScope AI](https://clarioscope.ai/)** &mdash; HIPAA-compliant healthcare practice growth platform
 - 🚀 **Shipping production AI products** &mdash; [BeautyCrew AI](https://beautycrew.ai), [VETR Proposal](https://vetrproposal.com), [CommonRoom AI](https://commonroomai.com)
 - 📚 **Open-source everything** &mdash; all model weights, configs, and tokenizers are public on Hugging Face
+
+---
+
+## 🏆 Latest ship
+
+### ClarioScope intent classifier v1 &mdash; matched frontier LLMs at 22× lower latency
+
+A 184M-parameter DeBERTa-v3-base fine-tune that classifies healthcare patient inquiries into 7 intents. Benchmarked head-to-head against Claude Haiku 4.5, Claude Sonnet 4.6, and GPT-4o on 1,154 held-out test examples:
+
+| Model | Accuracy | Latency / example | Cost / 1K |
+|---|---|---|---|
+| **clarioscope-intent-deberta-v1 (CPU)** | **91.16%** | **48 ms** | **$0** |
+| claude-haiku-4-5 | 95.32% | 1064 ms | $0.252 |
+| claude-sonnet-4-6 | 93.59% | 1566 ms | $0.759 |
+| gpt-4o-2024-11-20 | 95.23% | 1036 ms | $0.527 |
+
+Within 4 percentage points of accuracy of the best frontier model, **22× faster on CPU**, **$0 marginal per-inference cost** after deployment. First model of three in the ClarioScope SLM Suite (PHI detector + insurance extractor in development).
+
+[![Model card](https://img.shields.io/badge/🤗_Model-Card-yellow?style=for-the-badge)](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) [![dev.to writeup](https://img.shields.io/badge/dev.to-Writeup-000000?style=for-the-badge&logo=devdotto)](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2)
+
+![Accuracy vs latency](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1/resolve/main/accuracy_vs_latency.png)
 
 ---
 
