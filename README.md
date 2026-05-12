@@ -28,22 +28,30 @@
 
 ## 🏆 Latest ship
 
-### ClarioScope intent classifier v1 &mdash; matched frontier LLMs at 22× lower latency
+### ClarioScope PHI detector v1 &mdash; small model beats frontier on the entities that matter most
 
-A 184M-parameter DeBERTa-v3-base fine-tune that classifies healthcare patient inquiries into 7 intents. Benchmarked head-to-head against Claude Haiku 4.5, Claude Sonnet 4.6, and GPT-4o on 1,154 held-out test examples:
+A 125M-parameter RoBERTa-base fine-tune that tags spans of PHI in inbound patient text across all **18 HIPAA Safe Harbor identifier categories**. Benchmarked entity-level F1 against Claude Haiku 4.5, Claude Sonnet 4.6, and GPT-4o on a 548-example held-out test set:
 
-| Model | Accuracy | Latency / example | Cost / 1K |
-|---|---|---|---|
-| **clarioscope-intent-deberta-v1 (CPU)** | **91.16%** | **48 ms** | **$0** |
-| claude-haiku-4-5 | 95.32% | 1064 ms | $0.252 |
-| claude-sonnet-4-6 | 93.59% | 1566 ms | $0.759 |
-| gpt-4o-2024-11-20 | 95.23% | 1036 ms | $0.527 |
+| Model | Macro F1 | Weighted F1 | Latency | Cost / 1K |
+|---|---|---|---|---|
+| **clarioscope-phi-deberta-v1 (CPU)** | 0.6301 | 0.7639 | **28.6 ms** | **$0** |
+| claude-haiku-4-5 | 0.8492 | 0.9213 | 1294 ms | $1.00 |
+| claude-sonnet-4-6 | 0.8946 | 0.9396 | 1980 ms | $2.53 |
+| gpt-4o-2024-11-20 | 0.8094 | 0.8912 | 1111 ms | $1.64 |
 
-Within 4 percentage points of accuracy of the best frontier model, **22× faster on CPU**, **$0 marginal per-inference cost** after deployment. First model of three in the ClarioScope SLM Suite (PHI detector + insurance extractor in development).
+The headline says frontier wins on aggregate. **The per-entity breakdown says something more interesting:** the fine-tune **triples frontier F1 on geographic locations (0.82 vs 0.29)**, beats them on ages over 89, and matches them on names, dates, phone numbers, fax numbers, and IPs. Frontier wins on structured-ID memorization (MRN, license, health-plan IDs). **The right production architecture is hybrid:** SLM for linguistic entities + regex for structured patterns + frontier API as fallback. Model 2 of 3 in the ClarioScope SLM Suite.
 
-[![Model card](https://img.shields.io/badge/🤗_Model-Card-yellow?style=for-the-badge)](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) [![dev.to writeup](https://img.shields.io/badge/dev.to-Writeup-000000?style=for-the-badge&logo=devdotto)](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2)
+[![Model card](https://img.shields.io/badge/🤗_Model-Card-yellow?style=for-the-badge)](https://huggingface.co/raihan-js/clarioscope-phi-deberta-v1) [![dev.to writeup](https://img.shields.io/badge/dev.to-Writeup-000000?style=for-the-badge&logo=devdotto)](https://dev.to/raihan-js/where-small-models-beat-frontier-llms-and-where-they-dont-a-125m-phi-detector-4edb)
 
-![Accuracy vs latency](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1/resolve/main/accuracy_vs_latency.png?v=2)
+![Per-entity F1 across all four models](https://huggingface.co/raihan-js/clarioscope-phi-deberta-v1/resolve/main/per_entity_f1.png)
+
+---
+
+### Previously: ClarioScope intent classifier v1 &mdash; matched frontier LLMs at 22× lower latency
+
+184M-parameter DeBERTa-v3-base fine-tune for 7-class healthcare intent classification. Within 4 pp accuracy of the best frontier model on 1,154 examples, **22× faster on CPU**, **$0 per inference**.
+
+[![Model card](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) [![dev.to writeup](https://img.shields.io/badge/dev.to-Writeup-000000?style=flat-square&logo=devdotto)](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2)
 
 ---
 
