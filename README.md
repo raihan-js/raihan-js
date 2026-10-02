@@ -136,6 +136,21 @@ Also published: [ORCH Next.js 350M v2](https://huggingface.co/raihan-js/orch-nex
 
 ---
 
+## Research Projects
+
+Six projects applying statistical rigor to ML evaluation, monitoring, and retrieval. Every result cites a run ID and dataset revision.
+
+| Project | What it does | Key result | Links |
+|---|---|---|---|
+| **FlipGate** | Release gate for quantised LLMs — counts per-item answer flips vs. noise floor | 77-89 correct answers broke behind accuracy gains (p<0.0001) | [GH](https://github.com/raihan-js/flipgate) · [HF](https://huggingface.co/datasets/raihan-js/flipgate-results) |
+| **GraphProof-QA** | Constrained decoding for multi-hop QA | 34% → 97% accuracy (p≈0); renamed entities 81% vs 6% (p=1.2e-84) | [GH](https://github.com/raihan-js/graphproof-qa) · [HF](https://huggingface.co/raihan-js/graphproof-dsl-1.5b) |
+| **FedProc-Constrained** | What happens when hallucination is impossible | 0% fabrication but 75% substitution | [GH](https://github.com/raihan-js/fedproc-constrained) · [HF](https://huggingface.co/datasets/raihan-js/fedproc-constrained-results) |
+| **OracleBench** | Grades small LLM judges against deterministic oracles | False-accept 13-36%; position bias 85-92%; checker-first harness 18× fewer calls | [GH](https://github.com/raihan-js/oraclebench) · [HF](https://huggingface.co/datasets/raihan-js/oraclebench-items) |
+| **ShiftWatch** | Label-free accuracy estimation under data shift | No single estimator dominates; MAE 0.010-0.011 | [GH](https://github.com/raihan-js/shiftwatch) · [HF](https://huggingface.co/datasets/raihan-js/shiftwatch-ladder) |
+| **tiny-bilingual-retriever** | Distill bge-m3 into 30M JA-EN encoder | 71% of teacher at 1/19th size; Matryoshka 87% at 1/4 size | [GH](https://github.com/raihan-js/tiny-bilingual-retriever) · [HF](https://huggingface.co/raihan-js/tiny-rerank-ja-en-30m) |
+
+---
+
 ## Tech Stack
 
 <div align="center">
