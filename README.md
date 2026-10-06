@@ -2,211 +2,110 @@
 
 <div align="center">
 
-**AI/ML Engineer · CTO at [ClarioScope AI](https://clarioscope.ai/) · From Bangladesh**
+**AI/ML Engineer · LLMOps · Evaluation · Retrieval · From Bangladesh, open to relocating to Japan**
 
-*Train small language models (SLMs) from scratch · Fine-tune larger ones with QLoRA · Ship production AI products*
+*I build the measurement layer for LLM systems: release gates for quantised models, label-free monitoring, judge audits and grounding checks, each reported with per-item data and paired statistics.*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://raihan-js.github.io)
 [![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)](https://huggingface.co/raihan-js)
+[![dev.to](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/raihan-js)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raihan-js/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raihan@clarioscope.ai)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raihan@vetrproposal.com)
 
 </div>
 
 ---
 
-## What I'm Working On
+## What I'm working on
 
-- 🧠 **Training small language models from scratch** &mdash; the [ORCH series](https://huggingface.co/raihan-js) (350M&ndash;3B) for Next.js code generation, and [MedLLM-10M](https://huggingface.co/raihan-js/medllm-10m) for medical applications
-- 🔧 **Fine-tuning larger base models** with QLoRA &mdash; [ORCH-7B](https://huggingface.co/raihan-js/orch-7b) is a 4-bit fine-tune of DeepSeek Coder 6.7B
-- 🎯 **Building benchmark-grade specialist SLMs** &mdash; [clarioscope-intent-deberta-v1](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) matches frontier LLMs within 4 pp of accuracy at **22× lower latency** and $0/inference ([dev.to writeup](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2))
-- 🏥 **Leading engineering at [ClarioScope AI](https://clarioscope.ai/)** &mdash; HIPAA-compliant healthcare practice growth platform
-- 🚀 **Shipping production AI products** &mdash; [BeautyCrew AI](https://beautycrew.ai), [VETR Proposal](https://vetrproposal.com), [CommonRoom AI](https://commonroomai.com)
-- 📚 **Open-source everything** &mdash; all model weights, configs, and tokenizers are public on Hugging Face
+- 🧪 **Twelve open research projects** (below), each with code, tests and data on GitHub and Hugging Face. Nulls and negative results are reported as nulls, and every number carries its scope.
+- 🏛️ **Founding engineer and AI/ML lead at [VETR Proposal](https://vetrproposal.com)** (contract): an AI proposal platform for federal contractors. I trained FedProc-180M, F1 0.800 vs 0.804 for Claude Haiku 4.5 on FAR-clause extraction (FedProc-Bench test set), with 13.8% vs 32.1% hallucinated clauses.
+- 🇯🇵 **Japanese-language evaluation and retrieval**: JaCite-Bench, tiny-bilingual-retriever and Invoice-Check JP below. I'm studying Japanese (JLPT N5 targeted for December 2026).
+- 🧱 **Small models from scratch on one GPU**: the ORCH code models and the Vocab Tax study.
 
 ---
 
-## 🏆 Latest ship: the full ClarioScope SLM Suite (all three models shipped)
+## Research projects
 
-A three-model intake intelligence pipeline for healthcare practices. Each model is small, specialized, and benchmarked head-to-head against frontier APIs. Suite-level writeup: [Three small models for healthcare intake — and what shipping all three taught me](https://dev.to/raihan-js/three-small-models-for-healthcare-intake-and-what-shipping-all-three-taught-me-71l).
+Every result below cites its dataset, sample size and hardware in the project's README. Most are measured on synthetic or small data and say so there.
 
-| Model | Task | Size | Headline result | Speed vs frontier | Cost / 1K | Links |
-|---|---|---|---|---|---|---|
-| **clarioscope-intent-deberta-v1** | 7-class intent classification | 184M | 91.16% accuracy (within 4 pp of Claude Haiku) | **22× faster** | $0 | [🤗](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) · [📝](https://dev.to/ryandevv/matching-frontier-llms-at-22x-lower-latency-a-184m-parameter-intent-classifier-for-healthcare-text-5ec2) |
-| **clarioscope-phi-deberta-v1** | 18-category HIPAA PHI span detection | 125M | Macro F1 0.63 (triples frontier on `LOC`, ties on `NAME`/`DATE`/`PHONE`/`IP`/`AGE`) | **45× faster** | $0 | [🤗](https://huggingface.co/raihan-js/clarioscope-phi-deberta-v1) · [📝](https://dev.to/raihan-js/where-small-models-beat-frontier-llms-and-where-they-dont-a-125m-phi-detector-4edb) |
-| **clarioscope-insurance-v1** | 12-field insurance / billing extraction | 125M | Macro F1 0.79 (ties GPT-4o on `SUBSCRIBER_NAME`, within 5–13 pp on the four highest-volume fields) | **26× faster** | $0 | [🤗](https://huggingface.co/raihan-js/clarioscope-insurance-v1) · [📝](https://dev.to/raihan-js/three-small-models-for-healthcare-intake-and-what-shipping-all-three-taught-me-71l) |
-
-**Total cost to build all three:** ~$16 in OpenAI + RunPod + benchmark API spend. **Total infrastructure:** Hugging Face (free) + RunPod spot pods (a few cents per run).
-
-The recurring pattern across all three: small specialized models don't replace frontier APIs — they're stage one of a hybrid pipeline that does the bulk-volume work cheaply, then defers a small fraction of hard cases to a frontier API. All three model cards include honest per-entity / per-class breakdowns showing where the small model wins and loses.
-
-![Per-entity F1 — PHI detector vs frontier APIs](https://huggingface.co/raihan-js/clarioscope-phi-deberta-v1/resolve/main/per_entity_f1.png)
-
----
-
-## AI Models I've Trained
-
-All published openly on [🤗 Hugging Face](https://huggingface.co/raihan-js). Configs and tokenizers included.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🎼 ORCH Next.js 3B
-
-A **3 billion parameter** decoder-only transformer trained **from scratch** for full-stack Next.js code generation.
-
-| Spec | Value |
-|------|-------|
-| Parameters | ~3.0B |
-| Architecture | Custom LLaMA-style |
-| Layers / Hidden | 32 / 2,560 |
-| Attention / KV (GQA) | 32 / 8 |
-| Vocab | 32,000 (custom) |
-| Context | 16,384 tokens |
-| Hardware | NVIDIA A40 48GB (RunPod) |
-
-[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-nextjs-3b)
-
-</td>
-<td width="50%" valign="top">
-
-### 🔧 ORCH-7B
-
-**QLoRA fine-tune** of DeepSeek Coder 6.7B Instruct, specialized for autonomous Next.js generation.
-
-| Spec | Value |
-|------|-------|
-| Base model | DeepSeek Coder 6.7B Instruct |
-| Method | QLoRA (4-bit NF4 + LoRA) |
-| Training | 43h on a single A100 |
-| Steps | 5,238 |
-| Context | 16,384 (linear RoPE 4×) |
-
-[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-7b)
-[![Studio](https://img.shields.io/badge/🎨_ORCH-Studio-D4A574?style=flat-square)](https://huggingface.co/spaces/raihan-js/orch-studio)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🚀 ORCH Fusion (272M)
-
-Compact code-gen model trained **from scratch** on consumer hardware (RTX 3060 12GB).
-
-| Spec | Value |
-|------|-------|
-| Parameters | 272.7M |
-| Architecture | Custom LLaMA-style |
-| Layers / Hidden | 24 / 1,024 |
-| GQA | 16 heads / 4 KV |
-| Vocab | 2,103 (tiny custom) |
-
-**Benchmark (ORCH-ProjectBench):** 76.6 overall · 95.3 code parse · 93.3 format
-
-[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/orch-fusion)
-
-</td>
-<td width="50%" valign="top">
-
-### 🩺 MedLLM-10M
-
-GPT-2 style language model trained **from scratch** on medical literature.
-
-| Spec | Value |
-|------|-------|
-| Parameters | ~27.7M (10M body) |
-| Architecture | GPT-2 |
-| Layers / Hidden | 8 / 512 |
-| Heads / FFN | 8 / 2,048 |
-| Vocab | 5,000 (custom) |
-| Context | 512 |
-| Hardware | RTX 3060 12GB |
-
-> ⚠️ Research / educational use only. Not for clinical decision-making.
-
-[![Model](https://img.shields.io/badge/🤗_Model-Card-yellow?style=flat-square)](https://huggingface.co/raihan-js/medllm-10m)
-
-</td>
-</tr>
-</table>
-
-Also published: [ORCH Next.js 350M v2](https://huggingface.co/raihan-js/orch-nextjs-350m-v2) (287M, from scratch with 16k vocab).
-
----
-
-## Research Projects
-
-Six projects applying statistical rigor to ML evaluation, monitoring, and retrieval. Every result cites a run ID and dataset revision.
-
-| Project | What it does | Key result | Links |
+| Project | What it does | Key result (scope in the README) | Links |
 |---|---|---|---|
-| **FlipGate** | Release gate for quantised LLMs — counts per-item answer flips vs. noise floor | 77-89 correct answers broke behind accuracy gains (p<0.0001) | [GH](https://github.com/raihan-js/flipgate) · [HF](https://huggingface.co/datasets/raihan-js/flipgate-results) |
-| **GraphProof-QA** | Constrained decoding for multi-hop QA | 34% → 97% accuracy (p≈0); renamed entities 81% vs 6% (p=1.2e-84) | [GH](https://github.com/raihan-js/graphproof-qa) · [HF](https://huggingface.co/raihan-js/graphproof-dsl-1.5b) |
-| **FedProc-Constrained** | What happens when hallucination is impossible | 0% fabrication but 75% substitution | [GH](https://github.com/raihan-js/fedproc-constrained) · [HF](https://huggingface.co/datasets/raihan-js/fedproc-constrained-results) |
-| **OracleBench** | Grades small LLM judges against deterministic oracles | False-accept 13-36%; position bias 85-92%; checker-first harness 18× fewer calls | [GH](https://github.com/raihan-js/oraclebench) · [HF](https://huggingface.co/datasets/raihan-js/oraclebench-items) |
-| **ShiftWatch** | Label-free accuracy estimation under data shift | No single estimator dominates; MAE 0.010-0.011 | [GH](https://github.com/raihan-js/shiftwatch) · [HF](https://huggingface.co/datasets/raihan-js/shiftwatch-ladder) |
-| **tiny-bilingual-retriever** | Distill bge-m3 into 30M JA-EN encoder | 71% of teacher at 1/19th size; Matryoshka 87% at 1/4 size | [GH](https://github.com/raihan-js/tiny-bilingual-retriever) · [HF](https://huggingface.co/raihan-js/tiny-rerank-ja-en-30m) |
+| **[FlipGate](https://github.com/raihan-js/flipgate)** | Release gate for quantised LLMs: counts per-item right→wrong flips against a measured noise floor | Qwen2.5-3B, GSM8K-1000: AWQ and GPTQ each broke 91 correct answers (p = 0.0050 and 0.0028) while accuracy moved 3.5 to 3.7 points; the gate fails both | [GH](https://github.com/raihan-js/flipgate) · [HF](https://huggingface.co/datasets/raihan-js/flipgate-results) · [📝](https://dev.to/raihan-js/awq-looked-10-points-better-on-gsm8k-until-i-stopped-truncating-the-answers-18a7) |
+| **[ShiftWatch](https://github.com/raihan-js/shiftwatch)** | Label-free accuracy estimation under data shift, with a FastAPI + Prometheus sidecar | No estimator wins everywhere (Banking77, CLINC150, ModernBERT-base); DoC and CBPE never detect a drop | [GH](https://github.com/raihan-js/shiftwatch) · [HF](https://huggingface.co/datasets/raihan-js/shiftwatch-ladder) · [📝](https://dev.to/raihan-js/how-accurate-is-your-model-right-now-estimating-accuracy-without-labels-59kp) |
+| **[OracleBench](https://github.com/raihan-js/oraclebench)** | Audits small LLM judges against deterministic oracles | A 3B judge falsely accepts 11.0% of wrong answers, a 0.5B one 40.6% (1,760 items); checker-first harness: 0 errors by construction vs 412 for judge-only, 17.6× fewer judge calls | [GH](https://github.com/raihan-js/oraclebench) · [HF](https://huggingface.co/datasets/raihan-js/oraclebench-items) |
+| **[JaCite-Bench](https://github.com/raihan-js/jacite-bench)** | Do LLMs invent Japanese law articles? Registry of 11 laws, 6,913 articles, 600 questions | llm-jp-3-1.8b invents 4.05% of Japanese-language citations vs 1.09% in English (3.7×) | [GH](https://github.com/raihan-js/jacite-bench) · [HF](https://huggingface.co/datasets/raihan-js/jacite-bench) |
+| **[GraphProof-QA](https://github.com/raihan-js/graphproof-qa)** | Proof-carrying multi-hop QA with a 1.5B model | 34.2% direct vs 93.3% DSL vs 96.8% constrained on 6,000 MetaQA questions; entities renamed to unseen strings: 81.4% vs 5.8% | [GH](https://github.com/raihan-js/graphproof-qa) · [HF](https://huggingface.co/raihan-js/graphproof-dsl-1.5b) |
+| **[FedProc-Constrained](https://github.com/raihan-js/fedproc-constrained)** | A registry grammar for FAR clause numbers | Fabricated clauses 57/60 free vs 0/60 with the grammar (Qwen2.5-1.5B); with an abstain option the model also refused real clauses | [GH](https://github.com/raihan-js/fedproc-constrained) · [HF](https://huggingface.co/datasets/raihan-js/fedproc-constrained-results) |
+| **[tiny-bilingual-retriever](https://github.com/raihan-js/tiny-bilingual-retriever)** | bge-m3 (568M) distilled into a 36.7M English-Japanese encoder | 71% of the teacher's EN-JA nDCG@10 (synthetic eval) with 15× fewer parameters and a 4× smaller index; the public ruri-v3-30m scores higher | [GH](https://github.com/raihan-js/tiny-bilingual-retriever) · [HF](https://huggingface.co/raihan-js/tiny-rerank-ja-en-30m) |
+| **[Roofline-First Decoding](https://github.com/raihan-js/roofline-decoding)** | Fused W4A16 Triton GEMV for batch-1 decoding, written after computing the bandwidth ceiling | RTX 3060: 25.5 tok/s vs 25.7 for bitsandbytes NF4, with lower probe perplexity; measured copy bandwidth 323.9 GB/s | [GH](https://github.com/raihan-js/roofline-decoding) · [HF](https://huggingface.co/datasets/raihan-js/roofline-decoding-results) |
+| **[Vocab Tax](https://github.com/raihan-js/vocab-tax)** | Compute-matched vocabulary study, 16 decoders trained from scratch on TypeScript/JavaScript | 8k to 16k vocabularies win at every size; an 8.0M model with an 8k vocabulary beats a 33.5M one with 2k (1.168 vs 1.436 bits/byte); seed noise up to 0.13 | [GH](https://github.com/raihan-js/vocab-tax) · [HF](https://huggingface.co/datasets/raihan-js/vocab-tax-grid) |
+| **[DemoDoctor](https://github.com/raihan-js/demodoctor)** | What do bad robot demonstrations cost a policy? | A stall detector reaches F1 0.867 on injected faults; 12 ACT policies on PushT show no detectable effect of corrupted data (grid underpowered) | [GH](https://github.com/raihan-js/demodoctor) |
+| **[Invoice-Check JP](https://github.com/raihan-js/invoice-check-jp)** | A fine-tuned VLM reads Japanese qualified invoices (適格請求書); check digit, registry lookup and tax arithmetic gate auto-approval | QLoRA Qwen2.5-VL-3B on synthetic invoices: 83.0% exact; the checks auto-approve 86.8% with 0 of 461 wrong in a checkable field. Adapter is non-commercial | [GH](https://github.com/raihan-js/invoice-check-jp) · [HF dataset](https://huggingface.co/datasets/raihan-js/invoice-check-jp) · [HF adapter](https://huggingface.co/raihan-js/invoice-check-jp-qwen2.5-vl-3b-lora) |
+| **[Keiri-Agent](https://github.com/raihan-js/keiri-agent)** | A LangGraph back-office agent for Japanese invoices: verification, PO matching, human review, PostgreSQL checkpoints, LangSmith evaluation, exact CI gate | Pre-registered on 300 synthetic invoices: the checks cut unsafe auto-approvals from 17.0% to 4.0%; PO matching mostly rerouted rather than detected. Survives SIGKILL | [GH](https://github.com/raihan-js/keiri-agent) |
+
+More write-ups, charts and the full list: **[raihan-js.github.io](https://raihan-js.github.io)**.
 
 ---
 
-## Tech Stack
+## Models I've trained
+
+All published on [🤗 Hugging Face](https://huggingface.co/raihan-js), with configs and tokenizers. Built and published, not deployed.
+
+| Model | What it is | Hardware |
+|---|---|---|
+| [ORCH Next.js 3B](https://huggingface.co/raihan-js/orch-nextjs-3b) | 3B decoder-only LLaMA-style model trained from scratch for Next.js code generation (data-limited) | one rented A40 48GB |
+| [ORCH-7B](https://huggingface.co/orch-ai/ORCH-7B) | QLoRA fine-tune of DeepSeek Coder 6.7B Instruct (5,238 steps) | one A100, 43 h |
+| [ORCH Fusion](https://huggingface.co/raihan-js/orch-fusion) | 272M model trained from scratch, with a custom 2,103-token vocabulary | one RTX 3060 12GB |
+| [ORCH Next.js 350M v2](https://huggingface.co/raihan-js/orch-nextjs-350m-v2) | 287M model trained from scratch with a 16k vocabulary | one RTX 3060 12GB |
+| [FedProc-180M](https://huggingface.co/raihan-js/fedproc-180m-v0) | ModernBERT-base, 4 task heads, FAR-clause extraction | see the model card |
+
+**Earlier work, past role.** At ClarioScope AI (CTO and lead AI engineer, 2024 to 2026; the company was sunset in 2026 after two pivots and the models were open-sourced) I built and published the ClarioScope SLM suite: a [184M intent classifier](https://huggingface.co/raihan-js/clarioscope-intent-deberta-v1) (91.2% vs 95.2% for GPT-4o on a held-out set, about 22× faster than Claude Haiku 4.5), a [125M PHI detector](https://huggingface.co/raihan-js/clarioscope-phi-deberta-v1) (18 HIPAA Safe Harbor categories) and a [125M insurance extractor](https://huggingface.co/raihan-js/clarioscope-insurance-v1) (12 fields). Write-ups: [the suite](https://dev.to/raihan-js/three-small-models-for-healthcare-intake-and-what-shipping-all-three-taught-me-71l) and [the PHI detector](https://dev.to/raihan-js/where-small-models-beat-frontier-llms-and-where-they-dont-a-125m-phi-detector-4edb).
+
+---
+
+## Tech stack
 
 <div align="center">
 
 ### AI & ML
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)
-![Transformers](https://img.shields.io/badge/Transformers-FF6F00?style=for-the-badge)
-![QLoRA](https://img.shields.io/badge/PEFT_/_QLoRA-412991?style=for-the-badge)
-![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge)
+![PEFT / QLoRA](https://img.shields.io/badge/PEFT_/_QLoRA-412991?style=for-the-badge)
+![Triton](https://img.shields.io/badge/Triton-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![vLLM](https://img.shields.io/badge/vLLM-30A2FF?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge)
+![LangSmith](https://img.shields.io/badge/LangSmith-1C3C3C?style=for-the-badge)
+
+### Backend & platform
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 ### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### Backend
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-
-### Cloud & DevOps
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![RunPod](https://img.shields.io/badge/RunPod-673AB7?style=for-the-badge)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 </div>
 
 ---
 
-## Selected Live Products
+## Open source
 
-| Product | What it does |
-|---|---|
-| [ClarioScope AI](https://clarioscope.ai/) | HIPAA-compliant healthcare practice growth platform (CTO) |
-| [BeautyCrew AI](https://beautycrew.ai) | Booking management for the beauty industry — prevents missed appointments |
-| [VETR Proposal](https://vetrproposal.com) | AI-assisted federal contracting co-pilot for small business teams |
-| [CommonRoom AI](https://commonroomai.com) | Collaborative digital workspace — 15 group-coordination tools, no install |
-| [ORCH Studio](https://huggingface.co/spaces/raihan-js/orch-studio) | Generate complete Next.js apps from natural language (powered by ORCH-7B) |
-
----
-
-## Open Source
-
-- **[orch-ai](https://huggingface.co/orch-ai)** — Hugging Face org for the ORCH code-generation model family
-- **[clarioscope-ai](https://huggingface.co/clarioscope-ai)** — ClarioScope AI's Hugging Face org
-- Configs, tokenizers, and training details are public on every model card
+- **[orch-ai](https://huggingface.co/orch-ai)**: Hugging Face org for the ORCH code-generation model family
+- **[clarioscope-ai](https://huggingface.co/clarioscope-ai)**: Hugging Face org for the ClarioScope models
+- Also engineer and maintainer of CommonRoom AI (a 15-mini-app collaboration app) and founder of ILMA Lang (a beginner programming language that transpiles to C)
 
 ---
 
 <div align="center">
 
-📫 **Get in touch:** [raihan@clarioscope.ai](mailto:raihan@clarioscope.ai) · [Portfolio](https://raihan-js.github.io)
+📫 **Get in touch:** [raihan@vetrproposal.com](mailto:raihan@vetrproposal.com) · [Portfolio](https://raihan-js.github.io) · [LinkedIn](https://www.linkedin.com/in/raihan-js/)
 
 </div>
