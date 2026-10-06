@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**AI/ML Engineer · LLMOps · Evaluation · Retrieval · From Bangladesh, open to relocating to Japan**
+**AI/ML Engineer · LLMOps · Evaluation · Retrieval · From Bangladesh**
 
 *I build the measurement layer for LLM systems: release gates for quantised models, label-free monitoring, judge audits and grounding checks, each reported with per-item data and paired statistics.*
 
@@ -20,7 +20,7 @@
 
 - 🧪 **Twelve open research projects** (below), each with code, tests and data on GitHub and Hugging Face. Nulls and negative results are reported as nulls, and every number carries its scope.
 - 🏛️ **Founding engineer and AI/ML lead at [VETR Proposal](https://vetrproposal.com)** (contract): an AI proposal platform for federal contractors. I trained FedProc-180M, F1 0.800 vs 0.804 for Claude Haiku 4.5 on FAR-clause extraction (FedProc-Bench test set), with 13.8% vs 32.1% hallucinated clauses.
-- 🇯🇵 **Japanese-language evaluation and retrieval**: JaCite-Bench, tiny-bilingual-retriever and Invoice-Check JP below. I'm studying Japanese (JLPT N5 targeted for December 2026).
+- 🇯🇵 **Japanese-language evaluation and retrieval**: JaCite-Bench, tiny-bilingual-retriever and Invoice-Check JP below.
 - 🧱 **Small models from scratch on one GPU**: the ORCH code models and the Vocab Tax study.
 
 ---
